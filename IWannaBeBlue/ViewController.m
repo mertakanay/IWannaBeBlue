@@ -9,6 +9,8 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *colorLabel;
+@property (weak, nonatomic) IBOutlet UIButton *textLabel;
 
 @end
 
@@ -16,12 +18,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.colorLabel.backgroundColor = [UIColor redColor];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)changeColorOnTap:(id)sender {
+    self.colorLabel.backgroundColor = [UIColor blueColor];
+    self.textLabel.tintColor = [UIColor greenColor];
 }
 
 @end
